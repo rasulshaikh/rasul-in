@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GTM Workflows - Rasul Shaikh | Clay, n8n, Python, Claude Code</title>
+<meta name="description" content="Production GTM workflows across positioning, copywriting, outbound, ABM, RevOps, and LinkedIn content - built in Clay, n8n, Python, and Claude Code. 3x pipeline without 3x headcount." />
+<meta property="og:title" content="The workflows behind the numbers - Rasul Shaikh" />
+<meta property="og:description" content="Production workflows across positioning, copy, outbound, ABM, RevOps, content. Clay · n8n · Python · Claude Code." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://rasul.in/workflows.html" />
+<meta property="og:image" content="https://rasul.in/og-card.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230C1512'/%3E%3Ctext x='50%25' y='58%25' text-anchor='middle' font-family='monospace' font-size='30' fill='%23C6F16D'%3E%3E_%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper:#F4F4EE; --paper-2:#ECECE3; --ink:#131A16; --muted:#5B655E; --line:#D8D8CB;
+    --pine:#0E5237; --pine-deep:#0A3D29; --term-bg:#0C1512; --term-line:#1E2B24;
+    --phosphor:#C6F16D; --radius:14px; --maxw:1120px;
+    --c-signal:#BE185D; --c-clay:#B45309; --c-n8n:#6D28D9; --c-py:#1D4ED8; --c-ai:#0E5237; --c-crm:#475569;
+  }
+  *{margin:0;padding:0;box-sizing:border-box} html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  body{background:var(--paper);color:var(--ink);font-family:'Archivo',system-ui,sans-serif;font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--phosphor);color:var(--term-bg)}
+  a{color:var(--pine);text-decoration:none} a:hover{text-decoration:underline;text-underline-offset:3px}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--pine);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .nav{position:sticky;top:0;z-index:50;background:rgba(244,244,238,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .brand{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;color:var(--ink);display:inline-flex;gap:8px}
+  .brand:hover{text-decoration:none} .brand .prompt{color:var(--pine)}
+  .nav-links{display:flex;gap:22px;flex-wrap:wrap}
+  .nav-links a{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted)}
+  .nav-links a:hover{color:var(--pine);text-decoration:none}
+  @media (max-width:720px){.nav-links{display:none}}
+
+  .hero{padding:72px 0 48px;border-bottom:1px solid var(--line)}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--pine);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+  .eyebrow::before{content:"";width:22px;height:1.5px;background:var(--pine)}
+  h1{font-weight:800;font-size:clamp(34px,6vw,62px);line-height:1.04;letter-spacing:-.03em;max-width:18ch}
+  .hero-sub{margin-top:24px;max-width:66ch;font-size:17.5px;color:var(--muted);font-weight:500}
+  .hero-sub strong{color:var(--ink)}
+  .legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+  .lg{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:5px 11px;border-radius:999px;color:#fff}
+  .lg.signal{background:var(--c-signal)} .lg.clay{background:var(--c-clay)} .lg.n8n{background:var(--c-n8n)}
+  .lg.py{background:var(--c-py)} .lg.ai{background:var(--c-ai)} .lg.crm{background:var(--c-crm)}
+
+  section{padding:64px 0;border-bottom:1px solid var(--line)}
+  .wf{border:1px solid var(--line);border-radius:var(--radius);background:#FBFBF6;padding:30px 28px;margin-top:26px}
+  .wf:first-of-type{margin-top:40px}
+  .wf-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 16px}
+  .wf-tag{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--pine);font-weight:600;border:1px solid var(--pine);border-radius:999px;padding:4px 11px}
+  .wf h2{font-size:clamp(20px,3vw,26px);font-weight:800;letter-spacing:-.015em}
+  .wf-trigger{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted);margin-top:12px}
+  .wf-trigger b{color:var(--ink);font-weight:600}
+
+  .flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:10px;margin-top:20px}
+  .node{flex:1 1 150px;min-width:148px;max-width:220px;border:1px solid var(--line);border-radius:10px;background:#fff;padding:12px 13px;display:flex;flex-direction:column;gap:6px}
+  .tool{align-self:flex-start;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:#fff;padding:3px 8px;border-radius:999px}
+  .tool.signal{background:var(--c-signal)} .tool.clay{background:var(--c-clay)} .tool.n8n{background:var(--c-n8n)}
+  .tool.py{background:var(--c-py)} .tool.ai{background:var(--c-ai)} .tool.crm{background:var(--c-crm)}
+  .node b{font-size:14px;font-weight:700;letter-spacing:-.01em;line-height:1.3}
+  .node small{font-size:12px;color:var(--muted);line-height:1.45}
+  .arr{align-self:center;color:var(--pine);font-weight:800;font-size:18px;flex:0 0 auto}
+  @media (max-width:680px){
+    .flow{flex-direction:column}
+    .node{max-width:none}
+    .arr{transform:rotate(90deg);align-self:flex-start;margin-left:18px}
+  }
+  .wf-result{margin-top:18px;padding-top:14px;border-top:1px dashed var(--line);font-size:15px;font-weight:600;color:var(--pine-deep)}
+  .wf-result span{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);font-weight:400;display:block;margin-top:4px}
+
+  h3.group{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:52px;font-weight:600}
+  h3.group:first-of-type{margin-top:0}
+
+  /* fit criteria */
+  .fit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:40px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .fit{padding:26px;background:#FBFBF6;border-left:1px solid var(--line);border-top:1px solid var(--line)}
+  .fit:nth-child(-n+2){border-top:none} .fit:nth-child(odd){border-left:none}
+  .fit h3{font-size:17px;font-weight:800} 
+  .fit .crit{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--pine);margin-top:8px;font-weight:600}
+  .fit p{font-size:14px;color:var(--muted);margin-top:8px}
+  @media (max-width:680px){.fit-grid{grid-template-columns:1fr}.fit{border-left:none!important;border-top:1px solid var(--line)}.fit:first-child{border-top:none}}
+
+  .cta{padding:80px 0 60px;border-bottom:none}
+  h2.big{font-weight:800;font-size:clamp(28px,4.6vw,44px);letter-spacing:-.025em;max-width:20ch}
+  .sec-intro{margin-top:18px;max-width:64ch;color:var(--muted);font-size:17px;font-weight:500}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:500;padding:14px 22px;border-radius:10px;border:1.5px solid var(--ink);color:var(--ink);transition:transform .15s ease,background .15s ease}
+  .btn:hover{text-decoration:none;transform:translateY(-2px)}
+  .btn-primary{background:var(--ink);color:var(--phosphor)} .btn-primary:hover{background:var(--pine-deep);border-color:var(--pine-deep)}
+  .cta-row{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+  footer{border-top:1px solid var(--line);padding:26px 0 40px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><span class="prompt">&gt;_</span> rasul.in</a>
+    <div class="nav-links">
+      <a href="index.html">home</a>
+      <a href="case-study.html">case-study</a>
+      <a href="index.html#plays">plays</a>
+      <a href="index.html#experience">experience</a>
+      <a href="index.html#contact">contact</a>
+      <a href="retro.html">retro-mode</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">~/workflows · production systems, not slideware</p>
+    <h1>The workflows behind the numbers.</h1>
+    <p class="hero-sub">Venture math is brutal: the board expects <strong>3x</strong>, the headcount budget grows 1.2x. The gap gets closed by <strong>systems, not SDRs</strong>. These are the actual production workflows - Clay, n8n, Python, Claude Code - running across every GTM service line: positioning, copywriting, outbound, ABM, RevOps, and content.</p>
+    <div class="legend" aria-label="Tool legend">
+      <span class="lg signal">Signal</span><span class="lg clay">Clay</span><span class="lg n8n">n8n</span><span class="lg py">Python</span><span class="lg ai">Claude / LLM</span><span class="lg crm">CRM / Data</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+
+    <h3 class="group">Product marketing · Positioning</h3>
+
+    <article class="wf">
+      <div class="wf-head"><span class="wf-tag">positioning</span><h2>Positioning Intelligence Loop</h2></div>
+      <p class="wf-trigger">trigger: <b>weekly cron + every closed-won / closed-lost deal</b></p>
+      <div class="flow">
+        <div class="node"><span class="tool signal">Fathom / Fireflies</span><b>Call mining</b><small>Win/loss transcripts, objections, exact buyer language</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool py">Python</span><b>Competitor scrape</b><small>Firecrawl pulls review sites + competitor messaging</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool ai">Claude Code</span><b>Pattern analysis</b><small>Objection clusters, win themes, whitespace vs competitors</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool ai">Claude</span><b>Positioning vN</b><small>Updated narrative, messaging hierarchy, proof points</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool n8n">n8n</span><b>Propagation</b><small>New copy pushed to sequences, landing pages, decks</small></div>
+      </div>
+      <p class="wf-result">→ 4 positioning shifts shipped in the current build - each one validated in-market before the next
+        <span>the loop that keeps messaging honest: buyers write the positioning, the system just listens</span></p>
+    </article>
+
+    <h3 class="group">Copywriting</h3>
+
+    <article class="wf">
+      <div class="wf-head"><span class="wf-tag">copywriting</span><h2>7-Stage Copy Engine</h2></div>
+      <p class="wf-trigger">trigger: <b>new enriched account lands in the Clay table</b></p>
+      <div class="flow">
+        <div class="node"><span class="tool clay">Clay + LLM</span><b>Role mapping</b><small>Persona classified against ICP definition</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool py">Ahrefs API</span><b>SEO intel</b><small>Rankings, traffic, current SEMrush/Ahrefs stack usage</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool ai">LLM</span><b>Gap analysis</b><small>Where their current stack underperforms, with evidence</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool ai">LLM</span><b>Strategic angle</b><small>Positioning picked per account, mapped to pain</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool ai">Claude</span><b>Email generation</b><small>Per-contact copy in approved voice + QA pass</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool crm">Smartlead</span><b>Ship</b><small>Straight to sequence - zero human review</small></div>
+      </div>
+      <p class="wf-result">→ Hyper-personalized copy at scale, 1.5%+ positive replies across 150+ domains
+        <span>the stage most teams skip is 3 and 4 - that is exactly where generic AI copy dies</span></p>
+    </article>
+
+    <h3 class="group">Outbound</h3>
+
+    <article class="wf">
+      <div class="wf-head"><span class="wf-tag">outbound</span><h2>Signal-Routed Outbound</h2></div>
+      <p class="wf-trigger">trigger: <b>job posting, tech-stack change, or LinkedIn engagement detected</b></p>
+      <div class="flow">
+        <div class="node"><span class="tool signal">TheirStack / Trigify</span><b>Signal capture</b><small>Hiring patterns, stack changes, post engagers</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool n8n">n8n</span><b>Signal router</b><small>Branch by signal type, strength, and recency</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool clay">Clay</span><b>Waterfall enrich</b><small>5 sources: 85%+ coverage, +45% accuracy</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool ai">LLM</span><b>Sequence pick</b><small>Message angle matched to the triggering signal</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool crm">Smartlead + HeyReach</span><b>Multi-channel</b><small>Email + LinkedIn, 300+ mailboxes, 95%+ deliverability</small></div>
+      </div>
+      <p class="wf-result">→ 40% pipeline-efficiency gain, $180K+ ARR growth in 6 months
+        <span>fit: TAM above ~20k accounts, LTV above $5K - below that, run ABM instead</span></p>
+    </article>
+
+    <h3 class="group">ABM</h3>
+
+    <article class="wf">
+      <div class="wf-head"><span class="wf-tag">abm</span><h2>Asset-Led ABM Engine</h2></div>
+      <p class="wf-trigger">trigger: <b>account enters tier-1 target list</b></p>
+      <div class="flow">
+        <div class="node"><span class="tool py">Python</span><b>Deep research</b><small>Playwright + asyncio fan-out, 100+ domains per batch</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool ai">Claude + OpenAI</span><b>Context-to-content</b><small>Per-account narrative from research + Ahrefs data</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool crm">Pages + Sendspark</span><b>Personal assets</b><small>500+ visit-tracked landing pages, per-account video</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool signal">Tracking</span><b>Engagement watch</b><small>Share of Answer + AI Share of Voice reported per page</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool crm">HubSpot</span><b>Sales trigger</b><small>Visit + watch signals alert the closer with context</small></div>
+      </div>
+      <p class="wf-result">→ Enterprise logo closed at $25K MRR
+        <span>fit: TAM under ~20k accounts, LTV above $50K - the assets do the room-warming</span></p>
+    </article>
+
+    <h3 class="group">RevOps · Inbound</h3>
+
+    <article class="wf">
+      <div class="wf-head"><span class="wf-tag">revops</span><h2>Inbound Scoring &amp; Routing</h2></div>
+      <p class="wf-trigger">trigger: <b>form fill, demo request, or RB2B-identified visitor</b></p>
+      <div class="flow">
+        <div class="node"><span class="tool signal">RB2B / Forms</span><b>Capture</b><small>Anonymous visitors resolved to person + account</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool n8n">n8n</span><b>Webhook intake</b><small>Co-designed schema with Product + Engineering</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool ai">LLM rubric</span><b>Scoring agent</b><small>Custom ICP rubric scores fit + intent, with reasoning</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool crm">HubSpot</span><b>Auto-routing</b><small>Score + context pushed to properties, owner assigned</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool crm">Slack</span><b>Hot-lead alert</b><small>High scores ping the closer in minutes, not days</small></div>
+      </div>
+      <p class="wf-result">→ Lead qualification cut from 48h to 9.6h (-80%)
+        <span>speed-to-lead is the cheapest conversion lift in B2B - this buys it permanently</span></p>
+    </article>
+
+    <h3 class="group">LinkedIn content</h3>
+
+    <article class="wf">
+      <div class="wf-head"><span class="wf-tag">content</span><h2>Content Signal Flywheel</h2></div>
+      <p class="wf-trigger">trigger: <b>weekly content cycle + every post published</b></p>
+      <div class="flow">
+        <div class="node"><span class="tool signal">Transcripts + comments</span><b>Pain mining</b><small>Real ICP language harvested from calls and threads</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool ai">Claude</span><b>Draft in voice</b><small>Founder-voice posts from mined pains + proof points</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool signal">Trigify</span><b>Engager capture</b><small>Likers + commenters on target posts become records</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool clay">Clay</span><b>ICP filter + enrich</b><small>Only in-ICP engagers pass, fully enriched</small></div>
+        <span class="arr">→</span>
+        <div class="node"><span class="tool crm">HeyReach + Smartlead</span><b>Warm sequence</b><small>Engagement-referencing outreach, synced to CRM</small></div>
+      </div>
+      <p class="wf-result">→ Content stops being a vanity channel: every post becomes a 2P signal source feeding outbound
+        <span>fit: any B2B motion where the ICP is active on LinkedIn</span></p>
+    </article>
+
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">~/motion-selection</p>
+    <h2 class="big">The elite move is knowing which workflow NOT to run.</h2>
+    <p class="sec-intro">Most GTM waste comes from running the wrong motion for the market shape. The qualification I run before wiring anything:</p>
+    <div class="fit-grid">
+      <div class="fit"><h3>Automated outbound</h3><p class="crit">TAM &gt; 20k accounts · LTV &gt; $5K</p><p>Volume economics work. Signal-routed sequencing across email + LinkedIn, deliverability engineered first.</p></div>
+      <div class="fit"><h3>Asset-led ABM</h3><p class="crit">TAM &lt; 20k accounts · LTV &gt; $50K</p><p>Every account deserves handcrafted-feeling assets - generated by pipeline, tracked by visit.</p></div>
+      <div class="fit"><h3>Inbound orchestration</h3><p class="crit">Existing traffic or brand pull</p><p>Speed-to-lead and scoring first: the cheapest revenue is the demand you already have but answer too slowly.</p></div>
+      <div class="fit"><h3>Content flywheel</h3><p class="crit">ICP active on LinkedIn</p><p>Founder-led content mined from real buyer language, with engagers captured as second-party signal.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <p class="eyebrow">~/next</p>
+    <h2 class="big">Want these running in your GTM?</h2>
+    <p class="sec-intro">Agencies rent you these workflows at $5K+/month with junior operators behind the curtain. I build them into your stack, senior-operated, attributed to revenue - see the <a href="case-study.html">case study</a> for what that looks like end to end.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="mailto:shaikhrasul02@gmail.com">$ book a conversation</a>
+      <a class="btn" href="case-study.html">Read the case study →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+    <span>© 2026 Rasul Shaikh</span>
+    <span><a href="index.html">home</a> · <a href="retro.html">retro mode</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rasul.in/sitemap.xml
+
+# AI crawlers welcome - see /llms.txt

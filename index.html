@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rasul Shaikh - AI-Native GTM Lab | AI GTM Engineer</title>
+<meta name="description" content="An AI-native GTM lab run by one engineer and a roster of agents. $550K+ revenue closed, $3.5M+ pipeline sourced. Clay, n8n, Python, Claude Code - unattended." />
+<meta property="og:title" content="Rasul Shaikh - AI-Native GTM Lab" />
+<meta property="og:description" content="One engineer. A lab of agents. $550K+ closed, $3.5M+ pipeline - unattended." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://rasul.in" />
+<meta property="og:image" content="https://rasul.in/og-card.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://rasul.in/og-card.png" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23050805'/%3E%3Ctext x='50%25' y='60%25' text-anchor='middle' font-family='monospace' font-size='34' fill='%2341FF6B'%3E%3E_%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Rasul Shaikh","jobTitle":"AI GTM Engineer","description":"AI-native GTM lab: one engineer and a roster of agents. $550K+ revenue closed, $3.5M+ pipeline sourced across 3 greenfield builds.","email":"mailto:shaikhrasul02@gmail.com","url":"https://rasul.in","sameAs":["https://linkedin.com/in/rasulshaikh"],"address":{"@type":"PostalAddress","addressLocality":"Pune","addressCountry":"IN"},"worksFor":{"@type":"Organization","name":"Omnibound AI"}}
+</script>
+<style>
+  :root{
+    --bg:#050805; --panel:#0A120D; --panel2:#0D1710;
+    --bd:#1E2B24; --bd-hi:rgba(65,255,107,.45);
+    --ph:#41FF6B; --dim:#2E9B4C; --faint:#1C5C30;
+    --txt:#DCE8DA; --amber:#FFB000;
+    --glow:rgba(65,255,107,.35);
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --pix:'VT323',monospace;
+    --maxw:1140px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--txt);font-family:var(--mono);font-size:15.5px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  ::selection{background:var(--ph);color:var(--bg)}
+  a{color:var(--ph);text-decoration:none}
+  a:hover{text-decoration:underline;text-underline-offset:3px}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--ph);outline-offset:3px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  /* CRT overlays */
+  .scan{position:fixed;inset:0;z-index:90;pointer-events:none;
+    background:repeating-linear-gradient(0deg,rgba(0,0,0,0) 0 2px,rgba(0,0,0,.2) 3px,rgba(0,0,0,0) 4px);mix-blend-mode:multiply}
+  .vig{position:fixed;inset:0;z-index:89;pointer-events:none;
+    background:radial-gradient(ellipse at center,rgba(0,0,0,0) 55%,rgba(0,0,0,.5) 100%)}
+  .flick{position:fixed;inset:0;z-index:88;pointer-events:none;background:var(--ph);opacity:0;mix-blend-mode:overlay;animation:flick 5s steps(1) infinite}
+  @keyframes flick{0%,100%{opacity:0}7%{opacity:.014}7.4%{opacity:0}53%{opacity:.02}53.4%{opacity:0}}
+
+  /* nav */
+  .nav{position:sticky;top:0;z-index:70;background:rgba(5,8,5,.78);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .brand{font-family:var(--mono);font-weight:600;font-size:15px;color:var(--txt);display:inline-flex;align-items:center;gap:9px;text-shadow:0 0 8px var(--glow)}
+  .brand:hover{text-decoration:none}
+  .brand .p{color:var(--ph)}
+  .brand .lab{font-size:9.5px;letter-spacing:.16em;color:var(--dim);border:1px solid var(--bd);padding:3px 8px;text-transform:uppercase}
+  .nav-links{display:flex;gap:20px;flex-wrap:wrap}
+  .nav-links a{font-size:12px;color:var(--dim);letter-spacing:.04em}
+  .nav-links a:hover{color:var(--ph);text-decoration:none}
+  @media (max-width:760px){.nav-links{display:none}}
+
+  /* hero + 3D */
+  .hero{position:relative;min-height:96vh;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid var(--bd)}
+  #three{position:absolute;inset:0;z-index:0}
+  .hero-fade{position:absolute;inset:auto 0 0 0;height:180px;z-index:1;background:linear-gradient(180deg,transparent,var(--bg))}
+  .hero-inner{position:relative;z-index:2;width:100%;padding:110px 0 140px}
+  .op-card{display:inline-flex;align-items:center;gap:11px;border:1px solid var(--bd);background:rgba(10,18,13,.7);padding:7px 15px 7px 8px;margin-bottom:24px;backdrop-filter:blur(4px)}
+  .op-ava{width:32px;height:32px;background:var(--panel2);border:1px solid var(--bd-hi);display:grid;place-items:center;font-size:12px;color:var(--ph)}
+  .op-name{font-size:13px;font-weight:600}
+  .op-meta{font-size:10.5px;color:var(--dim);display:flex;align-items:center;gap:7px;letter-spacing:.05em}
+  .pulse{width:7px;height:7px;border-radius:50%;background:var(--ph);box-shadow:0 0 10px var(--ph);animation:pp 2s ease-in-out infinite}
+  @keyframes pp{50%{opacity:.3}}
+  .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .eyebrow b{color:var(--ph);font-weight:400}
+  h1{font-family:var(--pix);font-weight:400;font-size:clamp(58px,11vw,128px);line-height:.92;letter-spacing:.01em;color:var(--ph);text-shadow:0 0 14px var(--glow),0 0 50px rgba(65,255,107,.18);max-width:14ch;text-transform:uppercase}
+  h1 .alt{color:var(--txt);text-shadow:0 0 12px rgba(220,232,218,.25)}
+  .hero-sub{margin-top:24px;max-width:58ch;font-size:15.5px;color:var(--dim)}
+  .hero-sub strong{color:var(--txt);font-weight:600}
+  .cta-row{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13.5px;font-weight:500;padding:13px 21px;border:1px solid var(--bd);color:var(--txt);background:rgba(10,18,13,.75);cursor:pointer;transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease;backdrop-filter:blur(4px)}
+  .btn:hover{text-decoration:none;transform:translateY(-2px);border-color:var(--bd-hi);box-shadow:0 0 24px rgba(65,255,107,.15)}
+  .btn-primary{background:var(--ph);color:#05130A;border-color:var(--ph);font-weight:600;box-shadow:0 0 34px rgba(65,255,107,.3)}
+  .hero-ticker{position:absolute;left:0;right:0;bottom:0;z-index:3;border-top:1px solid var(--bd);background:rgba(5,8,5,.7);backdrop-filter:blur(6px);padding:9px 0;overflow:hidden}
+  .tick-track{display:flex;gap:46px;width:max-content;animation:marq 34s linear infinite}
+  .hero-ticker:hover .tick-track{animation-play-state:paused}
+  @keyframes marq{to{transform:translateX(-50%)}}
+  .tick-track span{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);white-space:nowrap}
+  .tick-track b{color:var(--dim);font-weight:400}
+
+  /* load-in */
+  .li{opacity:0;transform:translateY(16px);animation:liIn .7s cubic-bezier(.2,.7,.2,1) forwards}
+  .d1{animation-delay:.05s}.d2{animation-delay:.16s}.d3{animation-delay:.3s}.d4{animation-delay:.46s}.d5{animation-delay:.62s}
+  @keyframes liIn{to{opacity:1;transform:none}}
+
+  /* console */
+  .console-sec{padding:80px 0 0}
+  .console{border:1px solid var(--bd);background:var(--panel);box-shadow:0 30px 80px -34px rgba(0,0,0,.9),0 0 50px rgba(65,255,107,.06);overflow:hidden}
+  .con-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--bd)}
+  .dot{width:10px;height:10px;border-radius:50%;background:#22322A}
+  .con-title{margin-left:auto;font-size:11px;color:var(--dim);letter-spacing:.1em}
+  .con-title .live{color:var(--ph)}
+  .feed{padding:16px 20px;font-size:12.5px;line-height:2.05;min-height:216px;color:var(--dim)}
+  .feed .row{display:flex;gap:12px;opacity:0;transform:translateY(6px);transition:opacity .4s ease,transform .4s ease;flex-wrap:wrap}
+  .feed .row.on{opacity:1;transform:none}
+  .feed .ts{color:var(--faint)}
+  .feed .ag{color:var(--dim);min-width:118px}
+  .feed .ag.c1{color:var(--ph)}.feed .ag.c2{color:var(--amber)}
+  .feed .ok{color:var(--ph)}
+  .con-foot{padding:9px 20px;border-top:1px solid var(--bd);font-size:10px;color:var(--faint);letter-spacing:.1em}
+
+  /* metrics */
+  .metrics{padding:70px 0 8px}
+  .m-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+  .m{border:1px solid var(--bd);background:var(--panel);padding:20px 16px;transition:border-color .2s ease,transform .2s ease}
+  .m:hover{border-color:var(--bd-hi);transform:translateY(-3px)}
+  .m b{display:block;font-family:var(--pix);font-weight:400;font-size:clamp(30px,3.4vw,44px);line-height:1;color:var(--ph);text-shadow:0 0 12px var(--glow)}
+  .m span{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);display:block;margin-top:9px}
+  @media (max-width:980px){.m-grid{grid-template-columns:repeat(3,1fr)}}
+  @media (max-width:600px){.m-grid{grid-template-columns:repeat(2,1fr)}}
+
+  /* sections */
+  section{padding:96px 0}
+  .sec-eyebrow{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin-bottom:14px}
+  .sec-eyebrow::before{content:"// "}
+  h2{font-family:var(--pix);font-weight:400;font-size:clamp(38px,5.6vw,64px);line-height:.98;color:var(--txt);text-transform:uppercase;letter-spacing:.01em;max-width:22ch;text-shadow:0 0 18px rgba(220,232,218,.12)}
+  h2 .g{color:var(--ph);text-shadow:0 0 16px var(--glow)}
+  .sec-intro{margin-top:16px;max-width:64ch;color:var(--dim);font-size:15px}
+  .sec-intro strong{color:var(--txt)}
+
+  /* agents (3D tilt cards) */
+  .bento{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px;perspective:1200px}
+  .agent{position:relative;border:1px solid var(--bd);background:var(--panel);padding:24px;display:flex;flex-direction:column;gap:10px;transform-style:preserve-3d;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;will-change:transform}
+  .agent:hover{border-color:var(--bd-hi);box-shadow:0 24px 60px -30px rgba(0,0,0,.9),0 0 40px rgba(65,255,107,.1)}
+  .ag-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .ag-id{font-size:10.5px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase}
+  .ag-status{font-size:9.5px;color:var(--ph);display:inline-flex;align-items:center;gap:6px;letter-spacing:.1em}
+  .agent h3{font-family:var(--pix);font-weight:400;font-size:26px;line-height:1;color:var(--txt);text-transform:uppercase}
+  .agent p{font-size:13.5px;color:var(--dim)}
+  .ag-kpi{margin-top:auto;padding-top:11px;border-top:1px dashed var(--bd);font-size:13px;font-weight:600;color:var(--ph)}
+  .ag-stack{font-size:10.5px;color:var(--faint)}
+  @media (max-width:920px){.bento{grid-template-columns:1fr 1fr}}
+  @media (max-width:620px){.bento{grid-template-columns:1fr}}
+
+  /* laws */
+  .pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:42px}
+  .pr{border:1px solid var(--bd);background:var(--panel);padding:22px;transition:border-color .2s ease}
+  .pr:hover{border-color:var(--bd-hi)}
+  .pr i{font-style:normal;font-size:10.5px;color:var(--ph);letter-spacing:.14em}
+  .pr h3{font-family:var(--pix);font-weight:400;font-size:23px;margin-top:8px;text-transform:uppercase;line-height:1}
+  .pr p{font-size:12.5px;color:var(--dim);margin-top:9px}
+  @media (max-width:920px){.pgrid{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.pgrid{grid-template-columns:1fr}}
+
+  /* deep dives */
+  .dd{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:44px;perspective:1200px}
+  .dd a{border:1px solid var(--bd);background:var(--panel);padding:28px;display:flex;flex-direction:column;gap:11px;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;transform-style:preserve-3d}
+  .dd a:hover{text-decoration:none;border-color:var(--bd-hi);box-shadow:0 0 44px rgba(65,255,107,.12)}
+  .dd .tag{align-self:flex-start;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ph);border:1px solid var(--bd-hi);padding:4px 10px}
+  .dd h3{font-family:var(--pix);font-weight:400;font-size:30px;line-height:1;color:var(--txt);text-transform:uppercase}
+  .dd p{font-size:13.5px;color:var(--dim)}
+  .dd .go{font-size:12.5px;color:var(--ph);margin-top:auto}
+  @media (max-width:760px){.dd{grid-template-columns:1fr}}
+
+  /* experience */
+  .timeline{margin-top:44px;border-left:1.5px solid var(--bd)}
+  .job{position:relative;padding:0 0 42px 30px}
+  .job::before{content:"";position:absolute;left:-6px;top:9px;width:10px;height:10px;background:var(--bg);border:2px solid var(--ph);box-shadow:0 0 12px var(--glow)}
+  .job-dates{font-size:11px;color:var(--ph);letter-spacing:.1em}
+  .job h3{font-family:var(--pix);font-weight:400;font-size:28px;margin-top:7px;line-height:1;text-transform:uppercase}
+  .job-co{font-size:13.5px;color:var(--dim);font-weight:600;margin-top:4px}
+  .job ul{margin:12px 0 0;padding-left:18px}
+  .job li{font-size:13.5px;color:var(--dim);margin-top:8px}
+  .job li b{color:var(--txt);font-weight:600}
+  .job-earlier{font-size:13px;color:var(--dim);margin-top:6px}
+
+  /* stack */
+  .sgroup{display:grid;grid-template-columns:200px 1fr;gap:16px;padding:20px 0;border-top:1px solid var(--bd);align-items:start}
+  .swrap{margin-top:38px;border-bottom:1px solid var(--bd)}
+  .slabel{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ph);padding-top:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font-size:11.5px;padding:6px 12px;border:1px solid var(--bd);color:var(--txt);background:var(--panel);transition:border-color .18s ease,color .18s ease}
+  .chip:hover{border-color:var(--bd-hi);color:var(--ph)}
+  @media (max-width:680px){.sgroup{grid-template-columns:1fr;gap:10px}}
+
+  /* contact */
+  .contact-meta{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px 32px;font-size:12.5px;color:var(--dim)}
+  .contact-meta a{color:var(--txt)}
+  .contact-meta a:hover{color:var(--ph)}
+  footer{border-top:1px solid var(--bd);padding:24px 0 42px;font-size:11.5px;color:var(--faint)}
+
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
+  .rv.in{opacity:1;transform:none}
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    .li,.rv{opacity:1!important;transform:none!important}
+    .flick{display:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="scan" aria-hidden="true"></div>
+<div class="vig" aria-hidden="true"></div>
+<div class="flick" aria-hidden="true"></div>
+
+<nav class="nav" aria-label="Main">
+  <div class="nav-inner">
+    <a class="brand" href="#top"><span class="p">&gt;_</span> rasul.in <span class="lab">GTM Lab</span></a>
+    <div class="nav-links">
+      <a href="#agents">agents</a>
+      <a href="#laws">laws</a>
+      <a href="workflows.html">workflows</a>
+      <a href="case-study.html">case-study</a>
+      <a href="#experience">experience</a>
+      <a href="#contact">contact</a>
+      <a href="retro.html">terminal</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="three" aria-hidden="true"></canvas>
+  <div class="hero-fade" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="wrap">
+      <div class="op-card li d1">
+        <span class="op-ava">RS</span>
+        <span class="op-name">Rasul Shaikh</span>
+        <span class="op-meta"><span class="pulse" aria-hidden="true"></span> SHIPPING · PUNE, IN · REMOTE</span>
+      </div>
+      <p class="eyebrow li d2"><b>AI-NATIVE GTM LAB</b> · EST. 2020 · UNATTENDED SINCE DAY ONE</p>
+      <h1 class="li d3">Go-to-market,<br/><span class="alt">run by agents.</span></h1>
+      <p class="hero-sub li d4">One engineer. A roster of AI agents. I scope the strategy - <strong>TAM, ICP, personas, 1P/2P/3P signals</strong> - then compile it into pipelines that prospect, personalize, and book revenue <strong>unattended</strong>. Built with Claude Code, Python, Clay, and n8n.</p>
+      <div class="cta-row li d5">
+        <a class="btn btn-primary" href="mailto:shaikhrasul02@gmail.com">$ book a conversation</a>
+        <a class="btn" href="https://linkedin.com/in/rasulshaikh" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-ticker" aria-hidden="true">
+    <div class="tick-track" id="tick">
+      <span><b>◆</b> $550K+ REVENUE CLOSED</span><span><b>◆</b> $3.5M+ PIPELINE SOURCED</span><span><b>◆</b> 1.5%+ POSITIVE REPLIES</span><span><b>◆</b> QUALIFICATION 48H → 9.6H</span><span><b>◆</b> 300+ MAILBOXES</span><span><b>◆</b> 3 GREENFIELD BUILDS</span><span><b>◆</b> CLAY · N8N · PYTHON · CLAUDE CODE</span><span><b>◆</b> ZERO HUMAN REVIEW</span>
+    </div>
+  </div>
+</header>
+
+<div class="console-sec">
+  <div class="wrap">
+    <div class="console rv" aria-label="Live agent console">
+      <div class="con-bar" aria-hidden="true">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="con-title"><span class="live">●</span> GTM-LAB · AGENT CONSOLE</span>
+      </div>
+      <div class="feed" id="feed" aria-live="polite"></div>
+      <div class="con-foot">REPLAY OF A PRODUCTION RUN · METRICS FROM LIVE BUILDS · NO HUMANS WERE REQUIRED</div>
+    </div>
+  </div>
+</div>
+
+<div class="metrics">
+  <div class="wrap">
+    <div class="m-grid">
+      <div class="m rv"><b><span class="cnt" data-to="550" data-pre="$" data-suf="K+">$0K+</span></b><span>Revenue closed</span></div>
+      <div class="m rv"><b><span class="cnt" data-to="3.5" data-pre="$" data-suf="M+" data-dec="1">$0M+</span></b><span>Pipeline sourced</span></div>
+      <div class="m rv"><b><span class="cnt" data-to="1.5" data-suf="%+" data-dec="1">0%+</span></b><span>Positive reply rate</span></div>
+      <div class="m rv"><b>48h→9.6h</b><span>Lead qualification</span></div>
+      <div class="m rv"><b><span class="cnt" data-to="300" data-suf="+">0+</span></b><span>Mailboxes orchestrated</span></div>
+      <div class="m rv"><b><span class="cnt" data-to="3">0</span></b><span>Greenfield builds</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="agents">
+  <div class="wrap">
+    <p class="sec-eyebrow rv">the lab</p>
+    <h2 class="rv">Meet the <span class="g">agent roster.</span></h2>
+    <p class="sec-intro rv">The GTM org chart, collapsed into software. Each agent below is live in production - built, shipped, and attributed to revenue. Humans handle judgment and deals; the roster handles everything else.</p>
+    <div class="bento">
+      <article class="agent rv tilt">
+        <div class="ag-top"><span class="ag-id">signal-agent</span><span class="ag-status"><span class="pulse"></span>RUNNING</span></div>
+        <h3>Signal Capture</h3>
+        <p>Watches job posts, tech-stack changes, site visits, and LinkedIn engagement. Knows who is in-market this week, not who merely exists.</p>
+        <p class="ag-kpi">→ 40% pipeline-efficiency gain, $180K+ ARR in 6 months</p>
+        <p class="ag-stack">TheirStack · Trigify · RB2B · PhantomBuster</p>
+      </article>
+      <article class="agent rv tilt">
+        <div class="ag-top"><span class="ag-id">copy-agent</span><span class="ag-status"><span class="pulse"></span>RUNNING</span></div>
+        <h3>7-Stage Copy Engine</h3>
+        <p>Role mapping → SEO intel → gap analysis → positioning → generation. Per-contact emails for SEMrush/Ahrefs displacement, shipped with zero human review.</p>
+        <p class="ag-kpi">→ 1.5%+ positive replies across 150+ domains</p>
+        <p class="ag-stack">Clay · Claude Code · OpenAI · Smartlead</p>
+      </article>
+      <article class="agent rv tilt">
+        <div class="ag-top"><span class="ag-id">research-agent</span><span class="ag-status"><span class="pulse"></span>RUNNING</span></div>
+        <h3>Agentic Research</h3>
+        <p>Async fan-out across 100+ domains per batch with headless enrichment of JS-rendered pages. Analyst-days of intel, no analyst.</p>
+        <p class="ag-kpi">→ 6-hour batches down to under 30 minutes</p>
+        <p class="ag-stack">Python · Playwright · asyncio · deepline-CLI</p>
+      </article>
+      <article class="agent rv tilt">
+        <div class="ag-top"><span class="ag-id">abm-agent</span><span class="ag-status"><span class="pulse"></span>RUNNING</span></div>
+        <h3>Asset-Led ABM</h3>
+        <p>500+ visit-tracked personalized landing pages tracking Share of Answer + AI Share of Voice, plus per-account Sendspark video in sequence.</p>
+        <p class="ag-kpi">→ Enterprise logo closed at $25K MRR</p>
+        <p class="ag-stack">Ahrefs · OpenAI · Sendspark</p>
+      </article>
+      <article class="agent rv tilt">
+        <div class="ag-top"><span class="ag-id">route-agent</span><span class="ag-status"><span class="pulse"></span>RUNNING</span></div>
+        <h3>Inbound Routing</h3>
+        <p>Custom LLM rubric scores fit and intent with reasoning, pushes routed context into HubSpot, and pings the closer while the lead is still warm.</p>
+        <p class="ag-kpi">→ Qualification cut 48h to 9.6h (-80%)</p>
+        <p class="ag-stack">OpenAI · webhooks · HubSpot · Slack</p>
+      </article>
+      <article class="agent rv tilt">
+        <div class="ag-top"><span class="ag-id">warm-agent</span><span class="ag-status"><span class="pulse"></span>RUNNING</span></div>
+        <h3>De-Anonymization</h3>
+        <p>Resolves anonymous traffic to person and account, enriches through Clay, and auto-sequences into email + LinkedIn the same day.</p>
+        <p class="ag-kpi">→ Anonymous traffic becomes sequenced pipeline</p>
+        <p class="ag-stack">RB2B · n8n · Clay · Smartlead · HeyReach</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="laws" style="padding-top:0">
+  <div class="wrap">
+    <p class="sec-eyebrow rv">operating system</p>
+    <h2 class="rv">Four laws of the lab.</h2>
+    <div class="pgrid">
+      <div class="pr rv"><i>LAW 01</i><h3>Strategy compiles first</h3><p>TAM, ICP, personas, and signal selection are decided before a single tool is wired. A fast engine pointed at the wrong market is expensive noise.</p></div>
+      <div class="pr rv"><i>LAW 02</i><h3>Signals over lists</h3><p>Static lists say who exists. Signals - job posts, stack changes, visits, engagement - say who is buying this week. The lab sequences on the second.</p></div>
+      <div class="pr rv"><i>LAW 03</i><h3>Unattended by default</h3><p>If a pipeline needs a babysitter, it is not finished. Agents score, retry, branch, and ship copy without review.</p></div>
+      <div class="pr rv"><i>LAW 04</i><h3>Instrument to revenue</h3><p>Reply rates are diagnostics; ARR is the metric. Every agent attributes to closed-won or gets killed.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="deep-dives" style="padding-top:0">
+  <div class="wrap">
+    <p class="sec-eyebrow rv">proof, not promises</p>
+    <h2 class="rv">Built for <span class="g">3x math.</span></h2>
+    <p class="sec-intro rv">Venture-backed teams face brutal arithmetic: the board expects 3x pipeline, the budget grows 1.2x headcount. The lab closes that gap with compounding systems, not SDR headcount.</p>
+    <div class="dd">
+      <a class="rv tilt" href="case-study.html">
+        <span class="tag">case study</span>
+        <h3>Zero to $145K ARR in 9 months</h3>
+        <p>One engineer, one AI system, greenfield build no. 3. Engine live in under 3 days, $897K+ qualified and active pipeline, every dollar attributed.</p>
+        <span class="go">read the full build →</span>
+      </a>
+      <a class="rv tilt" href="workflows.html">
+        <span class="tag">workflows</span>
+        <h3>The workflows behind the numbers</h3>
+        <p>Node-by-node production diagrams across positioning, copywriting, outbound, ABM, RevOps, and LinkedIn content.</p>
+        <span class="go">see the systems →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="experience" style="padding-top:0">
+  <div class="wrap">
+    <p class="sec-eyebrow rv">track record</p>
+    <h2 class="rv">Three greenfield builds.<br/>Five years in the arena.</h2>
+    <div class="timeline">
+      <div class="job rv">
+        <p class="job-dates">OCT 2025 - PRESENT</p>
+        <h3>AI GTM Engineer</h3>
+        <p class="job-co">Omnibound AI - AI search marketing platform · Remote</p>
+        <ul>
+          <li>Engineered the full GTM stack from scratch - Trigify + PhantomBuster + Firecrawl → Claude Code → n8n → Supabase → Clay → HubSpot → Slack. <b>Deploy time cut from 2 weeks to under 3 days.</b></li>
+          <li>Converted the stack into revenue: <b>5 customers closed ($145K ARR)</b>, 8 BANT-qualified SQLs ($264K pipeline), 28 deals in active follow-up ($633K+ pipeline).</li>
+          <li>Built the 7-stage LLM personalization pipeline, the RB2B de-anonymization engine, 500+ ABM landing pages, and the full event/webinar engine - all wired into self-built HubSpot instrumentation.</li>
+        </ul>
+      </div>
+      <div class="job rv">
+        <p class="job-dates">APR 2023 - JUN 2025</p>
+        <h3>AI GTM Engineer, Founder's Office</h3>
+        <p class="job-co">RemoteState - IT services, $12.2M ARR · Noida</p>
+        <ul>
+          <li>Built the entire GTM engine from greenfield: <b>40% pipeline-efficiency gain and $180K+ ARR growth in 6 months</b> across 250+ sending domains at 95%+ deliverability.</li>
+          <li>Custom OpenAI lead-scoring cut qualification <b>48h → 9.6h (-80%)</b>; 5-source enrichment lifted targeting accuracy +45% with 85%+ ICP coverage.</li>
+          <li>Scaled the SDR team 1 → 4 on automation-first playbooks (<b>300% productivity</b>); video ABM booked an enterprise account at $25K MRR. Owned the website, SEO, and positioning end to end.</li>
+        </ul>
+      </div>
+      <div class="job rv">
+        <p class="job-dates">DEC 2022 - APR 2023</p>
+        <h3>Head of Growth - Contract</h3>
+        <p class="job-co">FalconWise Tech - cybersecurity · Dubai, Remote</p>
+        <ul>
+          <li>Owned GTM end to end at a lean early-stage startup - built a zero-to-one, asset-led ABM and outbound engine for MENA cybersecurity buyers (<b>+45% targeting accuracy</b>); partnered with founders on positioning and roadmap.</li>
+        </ul>
+      </div>
+      <div class="job rv">
+        <p class="job-dates">JUN 2022 - DEC 2022</p>
+        <h3>Senior BDR</h3>
+        <p class="job-co">CareerLabs - EdTech · Bangalore</p>
+        <ul>
+          <li>Rebuilt outbound across calling, email, and WhatsApp on HubSpot - <b>SQL rate 16% → 27%</b>, response time 4h → 2.4h, 40+ demos booked monthly at a 65% show rate.</li>
+        </ul>
+      </div>
+      <div class="job rv">
+        <p class="job-dates">2020 - 2022</p>
+        <h3>Earlier</h3>
+        <p class="job-earlier">Inside Sales Specialist, Skill-Lync (EdTech) · Government service · BCA, Computer Science - Sabarmati University · CSP - Relevel · PMM &amp; GTM - Dekker Fraser</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stack" style="padding-top:0">
+  <div class="wrap">
+    <p class="sec-eyebrow rv">the loadout</p>
+    <h2 class="rv">Hand-picked. Battle-tested.</h2>
+    <div class="swrap">
+      <div class="sgroup rv"><p class="slabel">AI &amp; Automation</p><div class="chips"><span class="chip">Claude Code</span><span class="chip">Anthropic API</span><span class="chip">OpenAI API</span><span class="chip">MCPs</span><span class="chip">OpenRouter</span><span class="chip">Groq</span><span class="chip">n8n</span><span class="chip">Modal</span><span class="chip">Apify</span><span class="chip">Firecrawl</span><span class="chip">ZenRows</span></div></div>
+      <div class="sgroup rv"><p class="slabel">Signals &amp; Intent</p><div class="chips"><span class="chip">Trigify</span><span class="chip">PhantomBuster</span><span class="chip">TheirStack</span><span class="chip">Common Room</span><span class="chip">Bombora</span><span class="chip">RB2B</span><span class="chip">Sumble</span></div></div>
+      <div class="sgroup rv"><p class="slabel">Outbound &amp; Enrichment</p><div class="chips"><span class="chip">Clay</span><span class="chip">Apollo</span><span class="chip">Sales Navigator</span><span class="chip">Smartlead</span><span class="chip">Instantly</span><span class="chip">Lemlist</span><span class="chip">HeyReach</span><span class="chip">Findymail</span><span class="chip">Prospeo</span><span class="chip">ZeroBounce</span></div></div>
+      <div class="sgroup rv"><p class="slabel">GTM &amp; CRM</p><div class="chips"><span class="chip">HubSpot</span><span class="chip">Salesforce</span><span class="chip">Pipedrive</span><span class="chip">Attio</span><span class="chip">Fathom</span><span class="chip">Fireflies</span><span class="chip">Sendspark</span></div></div>
+      <div class="sgroup rv"><p class="slabel">Data &amp; Analytics</p><div class="chips"><span class="chip">Python</span><span class="chip">Playwright</span><span class="chip">SQL</span><span class="chip">bash</span><span class="chip">Supabase</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">REST APIs</span><span class="chip">GA4</span><span class="chip">GSC</span><span class="chip">SEMrush</span><span class="chip">Ahrefs</span><span class="chip">Mixpanel</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <p class="sec-eyebrow rv">open channel</p>
+    <h2 class="rv">Building a GTM engine? <span class="g">Let's talk.</span></h2>
+    <p class="sec-intro rv">Currently AI GTM Engineer at Omnibound AI. Open to hard GTM engineering problems - greenfield builds, signal architecture, AI-native revenue systems.</p>
+    <div class="cta-row rv">
+      <a class="btn btn-primary" href="mailto:shaikhrasul02@gmail.com">$ shaikhrasul02@gmail.com</a>
+      <a class="btn" href="https://linkedin.com/in/rasulshaikh" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+    <div class="contact-meta rv">
+      <span>cv: <a href="Rasul_Shaikh_AI_GTM_Engineer.pdf">resume.pdf ↓</a></span>
+      <span>tel: <a href="tel:+917387244006">+91 73872 44006</a></span>
+      <span>loc: Pune, India - remote worldwide</span>
+      <span>tz: IST (UTC+5:30), overlaps US, EU, MENA &amp; ANZ</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+    <span>© 2026 Rasul Shaikh · AI-Native GTM Lab</span>
+    <span><span style="color:var(--ph)">$</span> built from the command line · <a href="retro.html">enter terminal ↗</a></span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function () {
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- 3D scene: wireframe GTM core over infinite grid ---------- */
+  var canvas = document.getElementById('three');
+  if (typeof THREE !== 'undefined' && canvas) {
+    try {
+      var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));
+      var scene = new THREE.Scene();
+      scene.fog = new THREE.Fog(0x050805, 22, 120);
+      var camera = new THREE.PerspectiveCamera(58, 1, 0.1, 300);
+      camera.position.set(0, 7, 30);
+      camera.lookAt(0, 3, 0);
+
+      var PH = 0x41ff6b, DIM = 0x1e2b24, MID = 0x2e9b4c;
+
+      /* infinite grid floor */
+      var grid = new THREE.GridHelper(400, 80, MID, DIM);
+      grid.position.y = -8;
+      grid.material.transparent = true;
+      grid.material.opacity = 0.55;
+      scene.add(grid);
+      var CELL = 400 / 80;
+
+      /* GTM core: nested wireframe icosahedra */
+      var core = new THREE.Group();
+      var icoOuter = new THREE.Mesh(
+        new THREE.IcosahedronGeometry(5.2, 1),
+        new THREE.MeshBasicMaterial({ color: PH, wireframe: true, transparent: true, opacity: 0.55 })
+      );
+      var icoInner = new THREE.Mesh(
+        new THREE.IcosahedronGeometry(3.1, 0),
+        new THREE.MeshBasicMaterial({ color: MID, wireframe: true, transparent: true, opacity: 0.5 })
+      );
+      var icoHeart = new THREE.Mesh(
+        new THREE.OctahedronGeometry(1.15, 0),
+        new THREE.MeshBasicMaterial({ color: PH, transparent: true, opacity: 0.9 })
+      );
+      core.add(icoOuter); core.add(icoInner); core.add(icoHeart);
+      core.position.y = 4;
+      scene.add(core);
+
+      /* orbiting agent nodes + links to core */
+      var AGENTS = 6, nodes = [], links = [];
+      var nodeGeo = new THREE.SphereGeometry(0.34, 12, 12);
+      for (var i = 0; i < AGENTS; i++) {
+        var mat = new THREE.MeshBasicMaterial({ color: PH, transparent: true, opacity: 0.95 });
+        var n = new THREE.Mesh(nodeGeo, mat);
+        n.userData = { a: (i / AGENTS) * Math.PI * 2, r: 9.4 + (i % 2) * 1.4, s: 0.24 + Math.random() * 0.12, y: Math.random() * Math.PI * 2 };
+        scene.add(n); nodes.push(n);
+        var lg = new THREE.BufferGeometry();
+        lg.setAttribute('position', new THREE.BufferAttribute(new Float32Array(6), 3));
+        var line = new THREE.Line(lg, new THREE.LineBasicMaterial({ color: MID, transparent: true, opacity: 0.5 }));
+        scene.add(line); links.push(line);
+      }
+
+      /* particle field */
+      var P = 420, pos = new Float32Array(P * 3);
+      for (var p = 0; p < P; p++) {
+        var rr = 30 + Math.random() * 70, th = Math.random() * Math.PI * 2, phv = Math.acos(2 * Math.random() - 1);
+        pos[p * 3] = rr * Math.sin(phv) * Math.cos(th);
+        pos[p * 3 + 1] = rr * Math.cos(phv) * 0.5 + 6;
+        pos[p * 3 + 2] = rr * Math.sin(phv) * Math.sin(th);
+      }
+      var pGeo = new THREE.BufferGeometry();
+      pGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+      var stars = new THREE.Points(pGeo, new THREE.PointsMaterial({ color: MID, size: 0.14, transparent: true, opacity: 0.75 }));
+      scene.add(stars);
+
+      /* pointer parallax */
+      var tx = 0, ty = 0;
+      window.addEventListener('pointermove', function (e) {
+        tx = (e.clientX / window.innerWidth - 0.5) * 2;
+        ty = (e.clientY / window.innerHeight - 0.5) * 2;
+      }, { passive: true });
+
+      function size() {
+        var w = canvas.clientWidth || canvas.parentElement.clientWidth;
+        var h = canvas.clientHeight || canvas.parentElement.clientHeight;
+        renderer.setSize(w, h, false);
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+      }
+      size();
+      window.addEventListener('resize', size);
+
+      var running = true;
+      document.addEventListener('visibilitychange', function () { running = !document.hidden; });
+
+      var t = 0;
+      function frame() {
+        requestAnimationFrame(frame);
+        if (!running) return;
+        t += 0.016;
+        grid.position.z = (t * 5.5) % CELL;
+        core.rotation.y = t * 0.28;
+        core.rotation.x = Math.sin(t * 0.2) * 0.12;
+        icoInner.rotation.y = -t * 0.55;
+        icoInner.rotation.z = t * 0.3;
+        icoHeart.scale.setScalar(1 + Math.sin(t * 2.4) * 0.16);
+        for (var i = 0; i < AGENTS; i++) {
+          var n = nodes[i], u = n.userData;
+          var a = u.a + t * u.s;
+          n.position.set(Math.cos(a) * u.r, 4 + Math.sin(t * 0.9 + u.y) * 1.6, Math.sin(a) * u.r);
+          n.material.opacity = 0.55 + 0.45 * (0.5 + 0.5 * Math.sin(t * 2 + i));
+          var lp = links[i].geometry.attributes.position.array;
+          lp[0] = 0; lp[1] = 4; lp[2] = 0;
+          lp[3] = n.position.x; lp[4] = n.position.y; lp[5] = n.position.z;
+          links[i].geometry.attributes.position.needsUpdate = true;
+        }
+        stars.rotation.y = t * 0.02;
+        camera.position.x += (tx * 3.2 - camera.position.x) * 0.04;
+        camera.position.y += (7 - ty * 2 - camera.position.y) * 0.04;
+        camera.lookAt(0, 3, 0);
+        renderer.render(scene, camera);
+      }
+      if (reduced) { size(); t = 4; grid.position.z = 0; renderer.render(scene, camera); }
+      else frame();
+    } catch (err) { canvas.style.display = 'none'; }
+  }
+
+  /* ---------- marquee ticker: duplicate for loop ---------- */
+  var tk = document.getElementById('tick');
+  tk.innerHTML += tk.innerHTML;
+
+  /* ---------- 3D tilt cards ---------- */
+  if (!reduced) {
+    document.querySelectorAll('.tilt').forEach(function (c) {
+      c.addEventListener('pointermove', function (e) {
+        if (e.pointerType && e.pointerType !== 'mouse') return;
+        var r = c.getBoundingClientRect();
+        var rx = ((e.clientY - r.top) / r.height - 0.5) * -8;
+        var ry = ((e.clientX - r.left) / r.width - 0.5) * 8;
+        c.style.transform = 'rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) translateY(-4px)';
+      });
+      c.addEventListener('pointerleave', function () { c.style.transform = ''; });
+    });
+  }
+
+  /* ---------- scroll reveal ---------- */
+  var rvs = document.querySelectorAll('.rv');
+  if (reduced) { rvs.forEach(function (el) { el.classList.add('in'); }); }
+  else {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+    rvs.forEach(function (el) { io.observe(el); });
+  }
+
+  /* ---------- counters ---------- */
+  function runCounter(el) {
+    var to = parseFloat(el.getAttribute('data-to'));
+    var dec = parseInt(el.getAttribute('data-dec') || '0', 10);
+    var pre = el.getAttribute('data-pre') || '';
+    var suf = el.getAttribute('data-suf') || '';
+    var t0 = null, dur = 1400;
+    function fr(t) {
+      if (!t0) t0 = t;
+      var p = Math.min((t - t0) / dur, 1);
+      var e = 1 - Math.pow(1 - p, 3);
+      el.textContent = pre + (to * e).toFixed(dec) + suf;
+      if (p < 1) requestAnimationFrame(fr);
+    }
+    requestAnimationFrame(fr);
+  }
+  var cnts = document.querySelectorAll('.cnt');
+  if (reduced) {
+    cnts.forEach(function (el) { el.textContent = (el.getAttribute('data-pre') || '') + el.getAttribute('data-to') + (el.getAttribute('data-suf') || ''); });
+  } else {
+    var cio = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { runCounter(e.target); cio.unobserve(e.target); } });
+    }, { threshold: 0.5 });
+    cnts.forEach(function (el) { cio.observe(el); });
+  }
+
+  /* ---------- live agent feed ---------- */
+  var feed = document.getElementById('feed');
+  var LOGS = [
+    ['signal-agent', 'c0', '47 accounts flagged .. job-post velocity spike detected'],
+    ['enrich-agent', 'c1', 'waterfall complete .. ICP coverage 86%, 5 sources merged'],
+    ['research-agent', 'c2', '112 domains crawled in 27m .. unattended'],
+    ['copy-agent', 'c1', '47/47 drafts generated .. voice + claims check passed'],
+    ['qa-agent', 'c0', '0 flags raised .. shipping without human review'],
+    ['deliver-agent', 'c2', 'inbox placement healthy .. rotating 300+ mailboxes'],
+    ['route-agent', 'c1', '3 hot leads scored .. pushed to closer via slack'],
+    ['crm-agent', 'c0', '2 deals advanced .. attribution written to the dollar'],
+    ['signal-agent', 'c0', 'rb2b resolved 9 anonymous visitors .. sequencing'],
+    ['abm-agent', 'c2', 'personal page generated .. share-of-answer tracking on'],
+    ['position-agent', 'c1', 'win/loss patterns mined .. narrative v4 holding'],
+    ['ops-agent', 'c0', 'retry branch executed .. pipeline state: green']
+  ];
+  function stamp() {
+    var d = new Date();
+    function z(n) { return (n < 10 ? '0' : '') + n; }
+    return z(d.getHours()) + ':' + z(d.getMinutes()) + ':' + z(d.getSeconds());
+  }
+  function addLog(i) {
+    var l = LOGS[i % LOGS.length];
+    var row = document.createElement('div');
+    row.className = 'row';
+    row.innerHTML = '<span class="ts">' + stamp() + '</span><span class="ag ' + l[1] + '">[' + l[0] + ']</span><span>' + l[2] + ' <span class="ok">✓</span></span>';
+    feed.appendChild(row);
+    requestAnimationFrame(function () { requestAnimationFrame(function () { row.classList.add('on'); }); });
+    while (feed.children.length > 7) feed.removeChild(feed.firstChild);
+  }
+  if (reduced) {
+    for (var i = 0; i < 6; i++) { addLog(i); feed.lastChild.classList.add('on'); }
+  } else {
+    var li2 = 0, started = false;
+    var fio = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting && !started) {
+          started = true; fio.disconnect();
+          addLog(li2++);
+          setInterval(function () { addLog(li2++); }, 1900);
+        }
+      });
+    }, { threshold: 0.2 });
+    fio.observe(feed);
+  }
+})();
+</script>
+
+</body>
+</html>
