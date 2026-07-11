@@ -10,10 +10,10 @@ Personal site for Rasul Shaikh (AI GTM Engineer). Pure static files, no build st
 
 ## Task: deploy to production on the domain rasul.in
 
-Preferred path (Vercel):
-1. `git init && git add -A && git commit -m "rasul.in v1"`
-2. `gh repo create rasul-in --private --source=. --push` (install/auth gh if needed)
-3. `npx vercel --prod` (login when prompted; framework: Other; no build command; output dir: ./)
+Preferred path (Vercel). NOTE: this folder is ALREADY a git repo with an initial commit - do not re-init.
+1. `gh auth login` (if not authenticated), then `gh repo create rasul-in --public --source=. --push`
+2. `npx vercel --prod` (login when prompted; framework: Other; no build command; output dir: ./)
+3. In the Vercel dashboard, link the GitHub repo for auto-deploys on push (or import it there directly).
 4. Add the custom domain: `npx vercel domains add rasul.in` then follow DNS instructions,
    typically at the registrar: A record @ -> 76.76.21.21, CNAME www -> cname.vercel-dns.com
 5. Wait for DNS + SSL, then verify.
