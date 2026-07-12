@@ -61,7 +61,7 @@
 
   /* hero + 3D */
   .hero{position:relative;min-height:96vh;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid var(--bd)}
-  #three{position:absolute;inset:0;z-index:0}
+  #three{position:absolute;inset:0;width:100%;height:100%;z-index:0}
   .hero-fade{position:absolute;inset:auto 0 0 0;height:180px;z-index:1;background:linear-gradient(180deg,transparent,var(--bg))}
   .hero-inner{position:relative;z-index:2;width:100%;padding:110px 0 140px}
   .op-card{display:inline-flex;align-items:center;gap:11px;border:1px solid var(--bd);background:rgba(10,18,13,.7);padding:7px 15px 7px 8px;margin-bottom:24px;backdrop-filter:blur(4px)}
@@ -490,8 +490,8 @@
         new THREE.MeshBasicMaterial({ color: PH, transparent: true, opacity: 0.9 })
       );
       core.add(icoOuter); core.add(icoInner); core.add(icoHeart);
-      var CORE_X = 20;
-      core.position.set(CORE_X, 4, 0);
+      var CORE_X = 20, CORE_Y = -9;
+      core.position.set(CORE_X, CORE_Y, 0);
       scene.add(core);
 
       /* orbiting agent nodes + links to core */
@@ -555,10 +555,10 @@
         for (var i = 0; i < AGENTS; i++) {
           var n = nodes[i], u = n.userData;
           var a = u.a + t * u.s;
-          n.position.set(CORE_X + Math.cos(a) * u.r, 4 + Math.sin(t * 0.9 + u.y) * 1.6, Math.sin(a) * u.r);
+          n.position.set(CORE_X + Math.cos(a) * u.r, CORE_Y + Math.sin(t * 0.9 + u.y) * 1.6, Math.sin(a) * u.r);
           n.material.opacity = 0.55 + 0.45 * (0.5 + 0.5 * Math.sin(t * 2 + i));
           var lp = links[i].geometry.attributes.position.array;
-          lp[0] = CORE_X; lp[1] = 4; lp[2] = 0;
+          lp[0] = CORE_X; lp[1] = CORE_Y; lp[2] = 0;
           lp[3] = n.position.x; lp[4] = n.position.y; lp[5] = n.position.z;
           links[i].geometry.attributes.position.needsUpdate = true;
         }
