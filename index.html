@@ -23,7 +23,7 @@
   :root{
     --bg:#050805; --panel:#0A120D; --panel2:#0D1710;
     --bd:#1E2B24; --bd-hi:rgba(65,255,107,.45);
-    --ph:#41FF6B; --dim:#2E9B4C; --faint:#1C5C30;
+    --ph:#41FF6B; --dim:#2E9B4C; --faint:#2A904B;
     --txt:#DCE8DA; --amber:#FFB000;
     --glow:rgba(65,255,107,.35);
     --mono:'IBM Plex Mono',ui-monospace,monospace;
@@ -490,8 +490,7 @@
         new THREE.MeshBasicMaterial({ color: PH, transparent: true, opacity: 0.9 })
       );
       core.add(icoOuter); core.add(icoInner); core.add(icoHeart);
-      var CORE_X = 20, CORE_Y = -9;
-      core.position.set(CORE_X, CORE_Y, 0);
+      var CORE_X = 0, CORE_Y = 4;
       scene.add(core);
 
       /* orbiting agent nodes + links to core */
@@ -528,12 +527,36 @@
         ty = (e.clientY / window.innerHeight - 0.5) * 2;
       }, { passive: true });
 
+      /* solve world X/Y that project to a target screen-space fraction, so the
+         core's on-screen placement stays consistent across every aspect ratio
+         instead of drifting off-frame at in-between viewport widths */
+      var _pv = new THREE.Vector3();
+      function ndcAt(x, y) { _pv.set(x, y, 0); _pv.project(camera); return _pv; }
+      function solveAxis(target, isX, other) {
+        var lo = isX ? -20 : -40, hi = isX ? 80 : 40;
+        for (var i = 0; i < 24; i++) {
+          var mid = (lo + hi) / 2;
+          var v = isX ? ndcAt(mid, other).x : ndcAt(other, mid).y;
+          if (v < target) lo = mid; else hi = mid;
+        }
+        return (lo + hi) / 2;
+      }
+
       function size() {
         var w = canvas.clientWidth || canvas.parentElement.clientWidth;
         var h = canvas.clientHeight || canvas.parentElement.clientHeight;
         renderer.setSize(w, h, false);
         camera.aspect = w / h;
         camera.updateProjectionMatrix();
+        if (w >= 760) {
+          var x = solveAxis(0.60, true, CORE_Y);
+          var y = solveAxis(-0.69, false, x);
+          x = solveAxis(0.60, true, y);
+          CORE_X = x; CORE_Y = y;
+        } else {
+          CORE_X = 0; CORE_Y = 4;
+        }
+        core.position.set(CORE_X, CORE_Y, 0);
       }
       size();
       window.addEventListener('resize', size);
