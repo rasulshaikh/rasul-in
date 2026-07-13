@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+(function(){
+  try{
+    var saved = localStorage.getItem('rasul-theme');
+    var light = saved ? saved === 'light' : window.matchMedia('(prefers-color-scheme: light)').matches;
+    if(light) document.documentElement.setAttribute('data-theme','light');
+  }catch(e){}
+})();
+</script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>GTM Workflows - Rasul Shaikh | Clay, n8n, Python, Claude Code</title>
@@ -27,6 +36,25 @@
     --radius:0; --maxw:1120px;
     --c-signal:#BE185D; --c-clay:#B45309; --c-n8n:#6D28D9; --c-py:#1D4ED8; --c-ai:#1F8B4C; --c-crm:#475569;
   }
+  [data-theme="light"]{
+    --bg:#F2F5F1; --panel:#E7ECE6; --panel2:#DEE6DC;
+    --bd:#C3CFC0; --bd-hi:rgba(15,110,55,.4);
+    --ph:#0F6E37; --dim:#3D6B4A; --faint:#3A6A41;
+    --txt:#131F17; --amber:#764D00;
+    --glow:rgba(15,110,55,.12);
+  }
+  [data-theme="light"] .scan,
+  [data-theme="light"] .vig,
+  [data-theme="light"] .flick{display:none}
+  [data-theme="light"] .nav{background:rgba(242,245,241,.85)}
+  [data-theme="light"] .btn,
+  [data-theme="light"] .theme-toggle{background:rgba(255,255,255,.7)}
+  [data-theme="light"] .btn:hover{box-shadow:0 8px 20px -8px rgba(19,31,23,.2)}
+  [data-theme="light"] .btn-primary{box-shadow:0 8px 24px -8px rgba(15,110,55,.3)}
+  [data-theme="light"] h1,
+  [data-theme="light"] .brand{text-shadow:none}
+  [data-theme="light"] .theme-toggle .icon-sun{display:none}
+  [data-theme="light"] .theme-toggle .icon-moon{display:block}
   *{margin:0;padding:0;box-sizing:border-box} html{scroll-behavior:smooth}
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
   body{background:var(--bg);color:var(--txt);font-family:var(--mono);font-size:15.5px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -44,10 +72,15 @@
   .nav-inner{max-width:var(--maxw);margin:0 auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
   .brand{font-family:var(--mono);font-weight:600;font-size:15px;color:var(--txt);display:inline-flex;align-items:center;gap:9px;text-shadow:0 0 8px var(--glow)}
   .brand:hover{text-decoration:none} .brand .prompt{color:var(--ph)}
+  .nav-right{display:flex;align-items:center;gap:20px}
   .nav-links{display:flex;gap:22px;flex-wrap:wrap}
   .nav-links a{font-family:var(--mono);font-size:12.5px;color:var(--dim);letter-spacing:.04em}
   .nav-links a:hover{color:var(--ph);text-decoration:none}
   @media (max-width:720px){.nav-links{display:none}}
+  .theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;flex:0 0 auto;border:1px solid var(--bd);background:rgba(10,18,13,.75);color:var(--txt);cursor:pointer;transition:border-color .16s ease;padding:0}
+  .theme-toggle:hover{border-color:var(--bd-hi)}
+  .theme-toggle svg{width:15px;height:15px;stroke:var(--ph)}
+  .theme-toggle .icon-moon{display:none}
 
   .hero{padding:72px 0 48px;border-bottom:1px solid var(--bd)}
   .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:20px;display:flex;align-items:center;gap:10px}
@@ -116,13 +149,19 @@
 <nav class="nav" aria-label="Main">
   <div class="nav-inner">
     <a class="brand" href="index.html"><span class="prompt">&gt;_</span> Rasul</a>
-    <div class="nav-links">
-      <a href="index.html">home</a>
-      <a href="case-study.html">case-study</a>
-      <a href="index.html#agents">plays</a>
-      <a href="index.html#experience">experience</a>
-      <a href="index.html#contact">contact</a>
-      <a href="retro.html">retro-mode</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="index.html">home</a>
+        <a href="case-study.html">case-study</a>
+        <a href="index.html#agents">plays</a>
+        <a href="index.html#experience">experience</a>
+        <a href="index.html#contact">contact</a>
+        <a href="retro.html">retro-mode</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
     </div>
   </div>
 </nav>
@@ -298,6 +337,22 @@
     <span><a href="index.html">home</a> · <a href="retro.html">retro mode</a></span>
   </div>
 </footer>
+
+<script>
+(function () {
+  var themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    themeToggle.setAttribute('aria-label', document.documentElement.getAttribute('data-theme') === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
+    themeToggle.addEventListener('click', function () {
+      var goingLight = document.documentElement.getAttribute('data-theme') !== 'light';
+      if (goingLight) document.documentElement.setAttribute('data-theme', 'light');
+      else document.documentElement.removeAttribute('data-theme');
+      themeToggle.setAttribute('aria-label', goingLight ? 'Switch to dark theme' : 'Switch to light theme');
+      try { localStorage.setItem('rasul-theme', goingLight ? 'light' : 'dark'); } catch (e) {}
+    });
+  }
+})();
+</script>
 
 </body>
 </html>
