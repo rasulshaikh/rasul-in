@@ -10,10 +10,10 @@ Fit criteria he applies: automated outbound for TAM > 20k accounts and LTV > $5K
 
 ## Pages
 
-- [Home](https://rasul.in/index.html): positioning, the 6-stage engine, plays, experience, stack, contact
-- [Case study](https://rasul.in/case-study.html): zero to $145K ARR in 9 months, one engineer, one AI system
-- [Workflows](https://rasul.in/workflows.html): node-by-node production workflow diagrams (positioning, copy, outbound, ABM, RevOps, content)
-- [Retro terminal](https://rasul.in/retro.html): interactive GTM-OS terminal version of this site
+- [Home](https://rasul.in/): positioning, the 6-stage engine, plays, experience, stack, contact
+- [Case study](https://rasul.in/case-study): zero to $145K ARR in 9 months, one engineer, one AI system
+- [Workflows](https://rasul.in/workflows): node-by-node production workflow diagrams (positioning, copy, outbound, ABM, RevOps, content)
+- [Retro terminal](https://rasul.in/retro): interactive GTM-OS terminal version of this site
 
 ## Contact
 
