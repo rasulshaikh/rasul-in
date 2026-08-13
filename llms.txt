@@ -4,14 +4,14 @@
 
 Rasul Shaikh is an AI GTM Engineer based in Pune, India, working remotely worldwide (IST, overlaps US, EU, MENA, ANZ). He builds production GTM systems in Clay, n8n, Python, and Claude Code across every service line: positioning, copywriting, outbound, ABM, RevOps, and LinkedIn content.
 
-Key results: 5 customers closed ($145K ARR) and $897K+ qualified/active pipeline in 9 months at Omnibound AI (greenfield build); 40% pipeline-efficiency gain and $180K+ ARR growth at RemoteState; lead qualification cut from 48h to 9.6h; 1.5%+ positive reply rates across 150+ domains and 300+ mailboxes at 95%+ deliverability.
+Key results: 5 customers closed and a qualified pipeline built in 9 months at Omnibound AI (greenfield build); 40% pipeline-efficiency gain and $180K+ ARR growth at RemoteState; lead qualification cut from 48h to 9.6h; 1.5%+ positive reply rates across 150+ domains and 300+ mailboxes at 95%+ deliverability.
 
 Fit criteria he applies: automated outbound for TAM > 20k accounts and LTV > $5K; asset-led ABM for TAM < 20k accounts and LTV > $50K; inbound orchestration when existing traffic or brand pull exists; LinkedIn content flywheel when the ICP is active on LinkedIn.
 
 ## Pages
 
 - [Home](https://rasul.in/): positioning, the 6-stage engine, plays, experience, stack, contact
-- [Case study](https://rasul.in/case-study): zero to $145K ARR in 9 months, one engineer, one AI system
+- [Case study](https://rasul.in/case-study): zero to first revenue in 9 months, one engineer, one AI system
 - [Workflows](https://rasul.in/workflows): node-by-node production workflow diagrams (positioning, copy, outbound, ABM, RevOps, content)
 - [Retro terminal](https://rasul.in/retro): interactive GTM-OS terminal version of this site
 
